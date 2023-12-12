@@ -25,7 +25,7 @@ jobs:
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: "sftp"
-          remote-host: 134.102.23.184
+          remote-host: ${{ secrets.SERVER_ADDRESS }}
           remote-user: "upload"
-          ssh-private-key: ${{ secrets.SSH_KEY }}
+          remote-password: ${{ secrets.ftp_password }}
           remote-path: "/var/www/html/pionierjournalismus/data/"
