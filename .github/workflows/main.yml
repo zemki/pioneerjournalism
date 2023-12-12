@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server-dir: /var/www/html/pionierjournalismus/data
+        server-dir: /var/www/html/pionierjournalismus/data/
         port: 22
         server: pionierjournalismus.de
         username: upload
