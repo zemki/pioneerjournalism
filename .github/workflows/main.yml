@@ -1,20 +1,17 @@
 on: push
-name: 🚀 eploy website on push
+name: Publish CSV
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🚀 Deploy Website Every Commit
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: 🚚 Get Latest Code
       uses: actions/checkout@v3
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
       with:
-        server-dir: /var/www/html/pionierjournalismus/data/
-        port: 22
-        protocol: ftps
-        timeout: 60000
-        server: ${{ secrets.server_address }}
-        username: upload
-        password: ${{ secrets.ftp_password }}
+        target-server: ${{ secrets.server_address }}
+        remote-user: zemki
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: /var/www/html/pionierjournalismus/data/
