@@ -12,6 +12,6 @@ jobs:
       uses: SamKirkland/web-deploy@v1
       with:
         target-server: ${{ secrets.server_address }}
-        remote-user: zemki
+        remote-user: upload
         private-ssh-key: ${{ secrets.SSH_KEY }}
         destination-path: /var/www/html/pionierjournalismus/data/
