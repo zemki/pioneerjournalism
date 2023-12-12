@@ -13,6 +13,7 @@ jobs:
       with:
         server-dir: /var/www/html/pionierjournalismus/data/
         port: 22
+        protocol: ftps
         timeout: 60000
         server: pionierjournalismus.de
         username: upload
