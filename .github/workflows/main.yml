@@ -1,5 +1,5 @@
-on: commit
-name: 🚀 Deploy website on push
+on: pull
+name: 🚀 eploy website on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
